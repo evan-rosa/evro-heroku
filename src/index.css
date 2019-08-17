@@ -1,0 +1,419 @@
+html {
+	font-size: 1rem;
+	height: 100%;
+}
+body,
+#root,
+.flyout-wrapper {
+	height: inherit;
+}
+body {
+	font-family: 'Catamaran', Roboto, Helvetica, Arial, sans-serif;
+}
+.height-inherit-vh {
+	min-height: 80vh;
+}
+
+/*LOGO Font*/
+@import url(//db.onlinewebfonts.com/c/84253ac850a27903273770579bbf9313?family=FrankentypeW01-Regular);
+@font-face {
+	font-family: "FrankentypeW01-Regular";
+	src: url("//db.onlinewebfonts.com/t/84253ac850a27903273770579bbf9313.eot");
+	src: url("//db.onlinewebfonts.com/t/84253ac850a27903273770579bbf9313.eot?#iefix") format("embedded-opentype"),
+		url("//db.onlinewebfonts.com/t/84253ac850a27903273770579bbf9313.woff2") format("woff2"),
+		url("//db.onlinewebfonts.com/t/84253ac850a27903273770579bbf9313.woff") format("woff"),
+		url("//db.onlinewebfonts.com/t/84253ac850a27903273770579bbf9313.ttf") format("truetype"),
+		url("//db.onlinewebfonts.com/t/84253ac850a27903273770579bbf9313.svg#FrankentypeW01-Regular") format("svg");
+}
+/*End Fonts*/
+
+/*Responsive Fonts*/
+
+@include media-breakpoint-up(sm) {
+	html {
+		font-size: 1.2rem;
+	}
+}
+
+@include media-breakpoint-up(md) {
+	html {
+		font-size: 1.4rem;
+	}
+}
+
+@include media-breakpoint-up(lg) {
+	html {
+		font-size: 1.6rem;
+	}
+}
+
+/*Overall CSS Styles*/
+.line-height {
+	line-height: 1.5;
+}
+.rcw-widget-container {
+	z-index: 1000 !important;
+}
+/*Chatbot styles*/
+.rcw-conversation-container .rcw-header {
+	background-color: #2c3d5c !important;
+}
+
+.rcw-message > .rcw-response {
+	background-color: #e2282e;
+	color: #fefefe !important;
+}
+.rcw-launcher {
+	background-color: #2c3d5c !important;
+}
+.rcw-client {
+	background-color: #2c3d5c !important;
+	color: #fefefe !important;
+}
+
+/* EVRO Background Colors*/
+.evro-navy-back {
+	background-color: #2c3d5c;
+}
+.evro-red-back {
+	background-color: #e2282e;
+}
+.evro-white-back {
+	background-color: #fefefe;
+}
+.evro-black-back {
+	background-color: #4a4a4a;
+}
+.evro-grey-back {
+	background-color: #f8fafd;
+}
+
+/* EVRO Font Colors*/
+.evro-navy-font {
+	color: #2c3d5c;
+}
+.evro-red-font {
+	color: #e2282e;
+}
+.evro-white-font {
+	color: #fefefe;
+}
+.evro-black-font {
+	color: #4a4a4a;
+}
+.evro-grey-font {
+	color: #f8fafd;
+}
+
+/* EVRO Buttons*/
+.evro-navy-btn {
+	border-color: #2c3d5c !important;
+	background-color: transparent !important;
+	color: #2c3d5c !important;
+	font-weight: bold !important;
+}
+.evro-red-btn {
+	border-color: #e2282e !important;
+	background-color: transparent !important;
+	color: #e2282e !important;
+	font-weight: bold !important;
+}
+.evro-white-btn {
+	border-color: #fefefe !important;
+	background-color: transparent !important;
+	color: #fefefe !important;
+	font-weight: bold !important;
+}
+.evro-black-btn {
+	border-color: #4a4a4a !important;
+	background-color: transparent !important;
+	color: #4a4a4a !important;
+	font-weight: bold !important;
+}
+.evro-grey-btn {
+	border-color: #f8fafd !important;
+	background-color: transparent !important;
+	color: #f8fafd !important;
+	font-weight: bold !important;
+}
+
+.btn-outline-default:hover,
+.btn-outline-default:focus,
+.btn-outline-default:active,
+.btn-outline-default:active:focus,
+.btn-outline-default.active,
+.nav-link:hover,
+.nav-link:focus,
+.nav-link:active,
+.nav-link:active:focus,
+.nav-link.active,
+.contact-link:hover,
+.contact-link:focus,
+.contact-link:active,
+.contact-link:active:focus,
+.contact-link.active {
+	border-color: #e2282e !important;
+	background-color: transparent !important;
+	color: #e2282e !important;
+}
+
+.App-logo {
+	width: 10rem;
+	font-family: "FrankentypeW01-Regular";
+	width: 100%;
+	height: 100%;
+	font-size: 5vh;
+	color: #2c3d5c;
+}
+.bring-to-front {
+	z-index: 10;
+	position: relative;
+}
+/*Navigation*/
+.nav-link {
+	color: #2c3d5c !important;
+}
+
+/*Contact Page*/
+.hello-margin {
+	margin-bottom: -.2rem;
+}
+.hello-btn {
+	padding: .3rem .7rem;
+}
+.hello-email {
+	margin-bottom: -.2rem;
+}
+.map-fit {
+	display: flex;
+	position: relative;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+	flex-wrap: wrap;
+	align-content: center;
+	max-height: 30rem;
+}
+.map-fit:after {
+	background-color: #e2282e;
+	opacity: 0.8;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	content: ' ';
+}
+.map-fit .dc-map {
+	min-width: 110%;
+	flex-grow: 1;
+}
+
+.contact-info {
+	font-weight: 600;
+	color: grey;
+}
+.contact-form-pad {
+	margin-bottom: 10rem;
+}
+.send-btn {
+	margin: 0;
+	padding: 3rem;
+	font-weight: 600;
+	font-size: 150%;
+}
+
+/*Home*/
+.parent-wrapper {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+}
+
+.content {
+	flex: 1 0 auto;
+}
+.child-wrapper {
+	flex-shrink: 0;
+}
+.home-hero {
+	z-index: 1 !important;
+}
+/*About*/
+svg.react-chart > text {
+	fill: #2c3d5c;
+}
+.skill-category {
+	line-height: 3.3;
+}
+.card .card-body h3 {
+	font-weight: 300 !important;
+}
+.card .card-body .card-text,
+.skill-list {
+	font-weight: 100 !important;
+}
+
+/*------DS Pages-------*/
+.asymmetric-down{
+ position: relative;
+ background-color: #2c3d5c;
+}
+.asymmetric-down::before {
+ position: absolute;
+ content: "";
+ width: 100%;
+ height: 100%;
+ top: 0;
+ left: 0;
+ background-color: #2c3d5c;
+ transform-origin: top left;
+ transform: skewY(-3deg)
+}
+.asymmetric-down::after {
+ position: absolute;
+ content: "";
+ width: 100%;
+ height: 100%;
+ top: 0;
+ left: 0;
+ background-color: #2c3d5c;
+ transform-origin: bottom left;
+ transform: skewY(3deg);
+ z-index: -10;
+}
+
+
+
+
+
+.asymmetric-up{
+ position: relative;
+ background-color: #f8fafd;
+}
+.asymmetric-up::before {
+ position: absolute;
+ content: "";
+ width: 100%;
+ height: 100%;
+ top: 0;
+ left: 0;
+ background-color: #f8fafd;
+ transform-origin: bottom right;
+ transform: skewY(3deg);
+}
+.asymmetric-up::after {
+ position: absolute;
+ content: "";
+ width: 100%;
+ height: 100%;
+ top: 0;
+ left: 0;
+ background-color: #f8fafd;
+ transform-origin: top right;
+ transform: skewY(-3deg);
+ z-index: -10;
+}
+/* ----------- Mobile Devices ----------- */
+
+/* ----------- Orientation Lock ----------- */
+@media screen and (min-width: 320px) and (max-width: 767px) and (orientation: landscape) {
+}
+
+/* ----------- General Devices ----------- */
+@media only screen and (max-width: 768px) {
+	.mobile-pad {
+		padding-top: 2rem;
+		padding-bottom: 2rem;
+	}
+}
+@media only screen and (min-width: 768px) {
+	.bring-to-front {
+		position: relative;
+		display: flex;
+		height: 100%;
+		align-items: center;
+	}
+	.hide-ham {
+		display: none;
+	}
+	.card-section-pad {
+		padding-bottom: 2rem;
+	}
+}
+@media only screen and (min-width: 768px) and (max-width: 1033px) {
+	.height-inherit-vh {
+		min-height: 87vh;
+	}
+}
+@media only screen and (min-height: 700px) {
+	.height-inherit-vh {
+		min-height: 87.3vh;
+	}
+}
+
+@media only screen and (min-height: 750px) {
+	.height-inherit-vh {
+		min-height: 88vh;
+	}
+}
+@media only screen and (min-height: 800px) {
+	.height-inherit-vh {
+		min-height: 88.4vh;
+	}
+}
+@media screen and (max-width: 800px) {
+	.rcw-widget-container.rcw-opened {
+		height: 80% !important;
+	}
+	.rcw-conversation-container .rcw-close-button {
+		background-color: #2c3d5c !important;
+	}
+}
+
+@media only screen and (min-width: 600px) and (min-height: 900px) {
+	.height-inherit-vh {
+		min-height: 89vh;
+	}
+}
+@media only screen and (max-width: 599px) and (min-height: 900px) {
+	.height-inherit-vh {
+		min-height: 89.6vh;
+	}
+}
+@media only screen and (min-width: 992px) {
+	.desk-absolute {
+		position: absolute !important;
+		top: 27rem;
+	}
+	.desk-margin {
+		margin-bottom: 20rem;
+		position: relative;
+	}
+}
+@media only screen and (max-width: 992px) {
+	.mobile-pad {
+		padding-bottom: 3rem;
+	}
+}
+@media only screen and (min-width: 1034px) {
+	.height-inherit-vh {
+		min-height: 89vh;
+	}
+}
+
+/* ----------- iPad Pro ----------- */
+/* Portrait and Landscape */
+@media only screen and (min-width: 1024px) and (max-height: 1366px) and (-webkit-min-device-pixel-ratio: 1.5) {
+}
+
+/* Portrait */
+@media only screen and (min-width: 1024px) and (max-height: 1366px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1.5) {
+	.height-inherit-vh {
+		min-height: 90vh;
+	}
+}
+
+/* Landscape */
+@media only screen and (min-width: 1024px) and (max-height: 1366px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1.5) {
+}

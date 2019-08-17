@@ -1,0 +1,48 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# testing
+/coverage
+
+# production
+/build
+
+# misc
+.DS_Store
+.env.local
+.env.development.localpip
+.env.test.local
+.env.production.local
+.env
+env
+.bash_profile
+**/*.pyc
+**/*.key
+.tar
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+sendgrid.env
+server.csr
+server.key
+server.pass.key
+ssl.txt
+sendgrid.env
+**/*.json
+.json
+yelp_dataset/business.json
+yelp_dataset/checkin.json
+yelp_dataset/photo.json
+yelp_dataset/review.json
+yelp_dataset/tip.json
+yelp_dataset/user.json
+
+
+
+
+

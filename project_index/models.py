@@ -45,7 +45,7 @@ class ProjectIndexPage(Page):
     def get_sitemap_urls(self, request=None):
         return [
             {
-                'location': 'https://www.evro.io/portfolio/',
+                'location': 'https://www.evro.io/portfolio',
                 'lastmod': self.latest_revision_created_at,
                 'changefreq': 'monthly',
                 'priority': 0.75

@@ -73,7 +73,7 @@ class AboutPage(Page):
     def get_sitemap_urls(self, request=None):
         return [
             {
-                'location': 'https://www.evro.io/about-evan-rosa/',
+                'location': 'https://www.evro.io/about/evan-rosa/',
                 'lastmod': self.latest_revision_created_at,
                 'changefreq': 'monthly',
                 'priority': 1.0

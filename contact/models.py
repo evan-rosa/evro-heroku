@@ -39,7 +39,7 @@ class ContactPage(Page):
     def get_sitemap_urls(self, request=None):
         return [
             {
-                'location': 'https://www.evro.io/contact-evan-rosa',
+                'location': 'https://www.evro.io/contact/evan-rosa',
                 'lastmod': self.latest_revision_created_at,
                 'changefreq': 'monthly',
                 'priority': 0.5

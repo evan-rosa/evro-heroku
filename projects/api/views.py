@@ -1,10 +1,10 @@
 from rest_framework import viewsets
 
-from projects.models import DataWine
+from projects.models import DatasetWine
 from .serializers import WineSerializer
 
 
 class WineViewSet(viewsets.ModelViewSet):
 
     serializer_class = WineSerializer
-    queryset = DataWine.objects.all()
+    queryset = DatasetWine.objects.all()

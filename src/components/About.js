@@ -293,7 +293,7 @@ class About extends React.Component {
 					</MDBRow>
 					<MDBRow>
 						<MDBCol md="12">
-							<Link to={`/contact`} data-internal="internal-contact-button">
+							<Link to={`/contact-evan-rosa`} data-internal="internal-contact-button">
 								<MDBBtn outline className="evro-navy-btn">
 									Contact
 								</MDBBtn>

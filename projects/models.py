@@ -155,8 +155,7 @@ class DsProjectsPage(Page):
 # Wine Data
 
 
-class DataWine(models.Model):
-    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+class DatasetWine(Page):
     country = models.CharField(max_length=250)
     description = models.CharField(max_length=500)
     designation = models.CharField(max_length=250)
@@ -168,5 +167,18 @@ class DataWine(models.Model):
     variety = models.CharField(max_length=250)
     winery = models.CharField(max_length=250)
 
-    def __str__(self):
-        return self.id
+    # Editor panels configuration
+
+    # API configuration
+    api_fields = [
+        APIField('country'),
+        APIField('description'),
+        APIField('designation'),
+        APIField('points'),
+        APIField('price'),
+        APIField('province'),
+        APIField('region_1'),
+        APIField('region_2'),
+        APIField('variety'),
+        APIField('winery'),
+    ]

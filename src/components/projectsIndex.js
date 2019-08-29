@@ -75,7 +75,7 @@ class ProjectIndexPage extends React.Component {
 					<MDBRow>
 						<MDBCol md="12">
 							<ProjectsList data={this.state.webProject} />
-							<DsList data={this.state.dsProject} />
+							{/*<DsList data={this.state.dsProject} />*/}
 						</MDBCol>
 					</MDBRow>
 				</MDBContainer>

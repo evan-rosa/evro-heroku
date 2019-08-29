@@ -17,9 +17,11 @@ class dsBlock extends React.Component {
 	}
 	getData() {
 		const projectID = this.props.match.params.projectID;
-		const url = `/api/v2/pages/${projectID}/?type=projects.DsProjectsPage&fields=*`;
+		const dsProjectApi = `/api/v2/pages/${projectID}/?type=projects.DsProjectsPage&fields=*`;
+		const dsData = `/api/ds/`;
+
 		axios
-			.get(url)
+			.get(dsProjectApi)
 			.then((res) => {
 				this.setState({
 					dsProject: res.data,
@@ -29,6 +31,16 @@ class dsBlock extends React.Component {
 				});
 			})
 			.catch((error) => this.setState({ error }));
+		axios
+			.get(dsData)
+			.then((res) => {
+				this.setState({
+					dsData: res.data.items,
+				});
+			})
+			.catch((error) => this.setState({ error }));
+		console.log(this.state.dsData);
+		console.log(this.state.dsProject);
 	}
 
 	componentDidMount() {

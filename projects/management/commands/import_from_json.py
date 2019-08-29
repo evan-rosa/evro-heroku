@@ -5,7 +5,9 @@ import os
 import csv
 import json
 import pandas as pd
-from projects.models import DataWine
+import uuid
+
+from projects.models import DatasetWine
 from django.core.management.base import BaseCommand
 
 
@@ -20,22 +22,24 @@ class Command(BaseCommand):
 
         for data_file in os.listdir(data_folder):
             with open(os.path.join(data_folder, data_file), encoding='utf-8') as data_file:
-                data = json.loads(data_file.read())
+                data = json.load(data_file)
                 for data_object in data:
-                    id = data_object.get('id', None)
-                    country = data_object.get('country', None)
-                    description = data_object.get('description', None)
-                    designation = data_object.get('designation', None)
-                    points = data_object.get('points', None)
-                    price = data_object.get('price', None)
-                    province = data_object.get('province', None)
-                    region_1 = data_object.get('region_1', None)
-                    region_2 = data_object.get('region_2', None)
-                    variety = data_object.get('variety', None)
-                    winery = data_object.get('winery', None)
+                    ##id = uuid.UUID(str(data[data_object]['id'])).hex
+
+                    id = data[data_object].get('id', None)
+                    country = data[data_object].get('country', None)
+                    description = data[data_object].get('description', None)
+                    designation = data[data_object].get('designation', None)
+                    points = data[data_object].get('points', None)
+                    price = data[data_object].get('price', None)
+                    province = data[data_object].get('province', None)
+                    region_1 = data[data_object].get('region_1', None)
+                    region_2 = data[data_object].get('region_2', None)
+                    variety = data[data_object].get('variety', None)
+                    winery = data[data_object].get('winery', None)
 
                     try:
-                        wine, created = DataWine.objects.get_or_create(
+                        wine, created = DatasetWine.objects.get_or_create(
                             id=id,
                             country=country,
                             description=description,

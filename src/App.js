@@ -67,7 +67,7 @@ class App extends Component {
 						<MDBCollapse id="mainNavbarCollapse" isOpen={this.state.collapseID} navbar>
 							<MDBNavbarNav right>
 								<MDBNavItem>
-									<MDBNavLink exact data-header="head-nav-about" to="/about-evan-rosa" onClick={this.closeCollapse('mainNavbarCollapse')}>
+									<MDBNavLink exact data-header="head-nav-about" to="/about/evan-rosa" onClick={this.closeCollapse('mainNavbarCollapse')}>
 										About
 									</MDBNavLink>
 								</MDBNavItem>
@@ -77,7 +77,7 @@ class App extends Component {
 									</MDBNavLink>
 								</MDBNavItem>
 								<MDBNavItem>
-									<MDBNavLink data-header="head-nav-contact" onClick={this.closeCollapse('mainNavbarCollapse')} to="/contact-evan-rosa">
+									<MDBNavLink data-header="head-nav-contact" onClick={this.closeCollapse('mainNavbarCollapse')} to="/contact/evan-rosa">
 										Contact
 									</MDBNavLink>
 								</MDBNavItem>

@@ -138,7 +138,7 @@ class HomePage extends React.Component {
 										</MDBRow>
 										<MDBRow>
 											<MDBCol>
-												<Link to="/about-evan-rosa" data-internal="internal-learn-about-evan">
+												<Link to="/about/evan-rosa" data-internal="internal-learn-about-evan">
 													<MDBBtn outline className="evro-navy-btn">
 														Learn More About Evan Rosa
 													</MDBBtn>

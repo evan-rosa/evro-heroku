@@ -15,9 +15,9 @@ class Routes extends React.Component {
 		return (
 			<Switch>
 				<Route exact path="/" component={HomePage} />
-				<Route exact path="/about-evan-rosa" component={About} />
+				<Route exact path="/about/evan-rosa" component={About} />
 				<Route exact path="/portfolio" component={ProjectsIndex} />
-				<Route exact path="/contact-evan-rosa" component={Contact} />
+				<Route exact path="/contact/evan-rosa" component={Contact} />
 				<Route exact path="/contact/thank-you" component={Thanks} />
 				<Route exact path="/portfolio/web/:projectID/:slug" component={webProject} />
 				{/*	<Route exact path="/portfolio/data-science/:projectID/:slug" component={dsProject} /> */}

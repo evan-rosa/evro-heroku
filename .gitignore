@@ -33,14 +33,7 @@ server.key
 server.pass.key
 ssl.txt
 sendgrid.env
-**/*.json
-.json
-yelp_dataset/business.json
-yelp_dataset/checkin.json
-yelp_dataset/photo.json
-yelp_dataset/review.json
-yelp_dataset/tip.json
-yelp_dataset/user.json
+
 
 
 

@@ -60,7 +60,7 @@ ALLOWED_HOSTS = [
 ]
 MEDIA_URL = "https://%s/" % AWS_S3_CUSTOM_DOMAIN
 DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
-
+STATICFILES_STORAGE = 'ManifestStaticFilesStorage'
 EMAIL_BACKEND = "sendgrid_backend.SendgridBackend"
 
 WAGTAILADMIN_NOTIFICATION_FROM_EMAIL = 'evan.rosa@evro.io'

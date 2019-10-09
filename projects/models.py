@@ -86,7 +86,7 @@ class ProjectsPage(Page):
     def get_sitemap_urls(self, request=None):
         return [
             {
-                'location': ('https://www.evro.io/portfolio/' + str(self.id) + '/' + self.slug),
+                'location': ('https://www.evro.io/portfolio/web/' + str(self.id) + '/' + self.slug),
                 'lastmod': (self.last_published_at or self.latest_revision_created_at),
                 'changefreq': 'monthly',
                 'priority': 0.75
@@ -151,6 +151,18 @@ class DsProjectsPage(Page):
             'fill-700x700', source='ds_image')),
         APIField('img_alt'),
     ]
+
+    # Site Map for DS Projects
+
+    def get_sitemap_urls(self, request=None):
+        return [
+            {
+                'location': ('https://www.evro.io/portfolio/data-science/' + str(self.id) + '/' + self.slug),
+                'lastmod': (self.last_published_at or self.latest_revision_created_at),
+                'changefreq': 'monthly',
+                'priority': 0.75
+            }
+        ]
 
 # Wine Data
 

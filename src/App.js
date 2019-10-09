@@ -72,7 +72,7 @@ class App extends Component {
 									</MDBNavLink>
 								</MDBNavItem>
 								<MDBNavItem>
-									<MDBNavLink data-header="head-nav-portfolio" onClick={this.closeCollapse('mainNavbarCollapse')} to="/portfolio">
+									<MDBNavLink data-header="head-nav-portfolio" onClick={this.closeCollapse('mainNavbarCollapse')} to="/portfolio/">
 										Portfolio
 									</MDBNavLink>
 								</MDBNavItem>

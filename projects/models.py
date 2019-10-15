@@ -163,34 +163,3 @@ class DsProjectsPage(Page):
                 'priority': 0.75
             }
         ]
-
-# Wine Data
-
-
-class DatasetWine(Page):
-    country = models.CharField(max_length=250)
-    description = models.CharField(max_length=500)
-    designation = models.CharField(max_length=250)
-    points = models.IntegerField()
-    price = models.IntegerField()
-    province = models.CharField(max_length=250)
-    region_1 = models.CharField(max_length=250)
-    region_2 = models.CharField(max_length=250)
-    variety = models.CharField(max_length=250)
-    winery = models.CharField(max_length=250)
-
-    # Editor panels configuration
-
-    # API configuration
-    api_fields = [
-        APIField('country'),
-        APIField('description'),
-        APIField('designation'),
-        APIField('points'),
-        APIField('price'),
-        APIField('province'),
-        APIField('region_1'),
-        APIField('region_2'),
-        APIField('variety'),
-        APIField('winery'),
-    ]

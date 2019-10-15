@@ -50,8 +50,6 @@ INSTALLED_APPS = [
 
 
     'wagtail.api.v2',
-    'data_wizard',
-    'data_wizard.sources',  # Recommended
     'rest_framework',
     'rest_pandas',
     'corsheaders',

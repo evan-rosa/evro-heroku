@@ -163,3 +163,57 @@ class DsProjectsPage(Page):
                 'priority': 0.75
             }
         ]
+
+# Wine Data
+
+
+class DatasetWine(models.Model):
+    wine_id = models.AutoField(primary_key=True)
+    country = models.CharField(max_length=250)
+    description = models.CharField(max_length=1000)
+    designation = models.CharField(max_length=250)
+    points = models.IntegerField()
+    price = models.IntegerField()
+    province = models.CharField(max_length=250)
+    region_1 = models.CharField(max_length=250)
+    region_2 = models.CharField(max_length=250)
+    taster_name = models.CharField(max_length=250)
+    taster_twitter_handle = models.CharField(max_length=250)
+    wine_name = models.CharField(max_length=250)
+    variety = models.CharField(max_length=250)
+    winery = models.CharField(max_length=250)
+
+    # Editor panels configuration
+    content_panels = Page.content_panels + [
+        FieldPanel('wine_id'),
+        FieldPanel('country'),
+        FieldPanel('description', classname="full"),
+        FieldPanel('designation', classname="full"),
+        FieldPanel('points', classname="full"),
+        FieldPanel('price', classname="full"),
+        FieldPanel('province', classname="full"),
+        FieldPanel('region_1', classname="full"),
+        FieldPanel('region_2', classname="full"),
+        FieldPanel('taster_name', classname="full"),
+        FieldPanel('taster_twitter_handle', classname="full"),
+        FieldPanel('wine_name', classname="full"),
+        FieldPanel('variety', classname="full"),
+        FieldPanel('winery', classname="full"),
+    ]
+    # API configuration
+    api_fields = [
+        APIField('wine_id'),
+        APIField('country'),
+        APIField('description'),
+        APIField('designation'),
+        APIField('points'),
+        APIField('price'),
+        APIField('province'),
+        APIField('region_1'),
+        APIField('region_2'),
+        APIField('taster_name'),
+        APIField('taster_twitter_handle'),
+        APIField('wine_name'),
+        APIField('variety'),
+        APIField('winery'),
+    ]

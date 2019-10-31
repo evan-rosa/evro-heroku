@@ -11,6 +11,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', 'SECRET_KEY')
 DB_PROD_NAME = os.environ.get('DB_PROD_NAME')
 DB_PROD_USER = os.environ.get('DB_PROD_USER')
 DB_PROD_PASS = os.environ.get('DB_PROD_PASS')
+DB_PROD_URL = os.environ.get('DB_PROD_URL')
 
 EVRO_PASS = os.environ.get('EVRO_PASS')
 
@@ -41,7 +42,8 @@ DATABASES = {
         'PORT': '',
     }
 }
-db_from_env = dj_database_url.config(conn_max_age=500)
+db_from_env = dj_database_url.config(
+    default=os.environ.get('DB_PROD_URL', DB_PROD_URL), conn_max_age=500)
 DATABASES['default'].update(db_from_env)
 
 # Honor the 'X-Forwarded-Proto' header for request.is_secure()

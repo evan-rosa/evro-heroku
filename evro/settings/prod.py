@@ -28,6 +28,7 @@ AWS_HEADERS = {
     'Access-Control-Allow-Origin': '*'
 }
 
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # Database
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases

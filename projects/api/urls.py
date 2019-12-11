@@ -3,5 +3,5 @@ from projects.api.views import WineViewSet
 
 
 router = DefaultRouter()
-router.register(r'', WineViewSet, basename='datasetwine')
+router.register(r'', WineViewSet, basename='DataWine')
 urlpatterns = router.urls

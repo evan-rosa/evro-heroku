@@ -167,8 +167,8 @@ class DsProjectsPage(Page):
 # Wine Data
 
 
-class DatasetWine(models.Model):
-    wine_id = models.AutoField(primary_key=True)
+class DataWine(models.Model):
+    wine_id = models.AutoField(primary_key=True, unique=True)
     country = models.CharField(max_length=250)
     description = models.CharField(max_length=1000)
     designation = models.CharField(max_length=250)

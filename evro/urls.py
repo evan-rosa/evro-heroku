@@ -26,7 +26,7 @@ urlpatterns = [
 
     url(r'^api-path/', include('rest_framework.urls')),
     url(r'^api/v2/', api_router.urls),
-    url(r'^api/evro/dataset/wine/', include('projects.api.urls')),
+    url(r'^api/evro/data/wine/', include('projects.api.urls')),
     url(r'^api/contact/', include('contact.api.urls')),
     url(r'^robots\.txt', include('robots.urls')),
     url(r'^sitemap\.xml$', sitemap),

@@ -25,13 +25,13 @@ Django==2.2.6
 django-adaptors==0.2.5
 django-cors-headers==2.5.2
 django-letsencrypt==3.0.1
-django-modelcluster==4.3
+django-modelcluster==5.0
 django-mustache==1.1.1
 django-redis-cache==2.1.0
 django-sendgrid-v5==0.8.0
 django-sslserver==0.20
 django-storages==1.7.1
-django-taggit==0.23.0
+django-taggit==1.1.0
 django-treebeard==4.3
 djangorestframework==3.9.2
 djangorestframework-csv==2.1.0
@@ -131,7 +131,7 @@ unicodecsv==0.14.1
 Unidecode==1.0.23
 unittest2==1.1.0
 urllib3==1.24.2
-wagtail==2.6.2
+wagtail==2.7
 wagtail-robots==0.1.2
 wagtail-schema.org==2.0.0
 wcwidth==0.1.7
@@ -139,7 +139,7 @@ webencodings==0.5.1
 Werkzeug==0.15.5
 whitenoise==3.3.1
 widgetsnbextension==3.4.2
-Willow==1.1
+Willow==1.3
 wq.app==1.1.2
 wq.db==1.1.4
 wq.start==1.1.1

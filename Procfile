@@ -1,2 +1,3 @@
 release: python manage.py migrate
-web: gunicorn evro.wsgi --log-file -
+
+web: python manage.py collectstatic --no-input; gunicorn evro.wsgi --log-file - --log-level debug

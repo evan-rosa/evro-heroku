@@ -52,6 +52,7 @@ class ProjectIndexPage extends React.Component {
 				});
 			})
 			.catch((error) => this.setState({ error }));
+		console.log(this.state.webProject.items);
 	}
 
 	componentDidMount() {

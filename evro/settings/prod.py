@@ -52,8 +52,8 @@ SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 # SECURITY WARNING: define the correct hosts in production!
 ALLOWED_HOSTS = [
-    ".herokuapp.com",
-    ".evro.io",
+    "evro.herokuapp.com",
+    "www.evro.io",
     "localhost",
 ]
 MEDIA_URL = "https://%s/" % AWS_S3_CUSTOM_DOMAIN

@@ -1,3 +1,5 @@
+{/* REPLACE NAVLINK WITH MDBNAVLINK AFTER FEB 1ST 2020*/ }
+
 import React, { Component } from 'react';
 import { ParallaxProvider } from 'react-scroll-parallax';
 import { Widget, addResponseMessage, addLinkSnippet, addUserMessage } from 'react-chat-widget';
@@ -10,7 +12,7 @@ import {
 	MDBHamburgerToggler,
 	MDBCollapse,
 	MDBNavItem,
-	MDBNavLink
+	NavLink
 } from 'mdbreact';
 import { BrowserRouter as Router } from 'react-router-dom';
 import Routes from './Routes';
@@ -67,19 +69,19 @@ class App extends Component {
 						<MDBCollapse id="mainNavbarCollapse" isOpen={this.state.collapseID} navbar>
 							<MDBNavbarNav right>
 								<MDBNavItem>
-									<MDBNavLink exact data-header="head-nav-about" to="/about/evan-rosa" onClick={this.closeCollapse('mainNavbarCollapse')}>
+									<NavLink exact data-header="head-nav-about" to="/about/evan-rosa" onClick={this.closeCollapse('mainNavbarCollapse')}>
 										About
-									</MDBNavLink>
+									</NavLink>
 								</MDBNavItem>
 								<MDBNavItem>
-									<MDBNavLink data-header="head-nav-portfolio" onClick={this.closeCollapse('mainNavbarCollapse')} to="/portfolio/">
+									<NavLink data-header="head-nav-portfolio" onClick={this.closeCollapse('mainNavbarCollapse')} to="/portfolio/">
 										Portfolio
-									</MDBNavLink>
+									</NavLink>
 								</MDBNavItem>
 								<MDBNavItem>
-									<MDBNavLink data-header="head-nav-contact" onClick={this.closeCollapse('mainNavbarCollapse')} to="/contact/evan-rosa">
+									<NavLink data-header="head-nav-contact" onClick={this.closeCollapse('mainNavbarCollapse')} to="/contact/evan-rosa">
 										Contact
-									</MDBNavLink>
+									</NavLink>
 								</MDBNavItem>
 							</MDBNavbarNav>
 						</MDBCollapse>

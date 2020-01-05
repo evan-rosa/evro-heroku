@@ -154,8 +154,6 @@ STATICFILES_FINDERS = [
 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'build/static'),
-    # new directory for wagtail admin production
-    os.path.join(BASE_DIR, 'staticfiles/static'),
 ]
 
 

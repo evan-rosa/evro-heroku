@@ -62,7 +62,9 @@ ALLOWED_HOSTS = [
 ]
 MEDIA_URL = "https://%s/" % AWS_S3_CUSTOM_DOMAIN
 DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+
 EMAIL_BACKEND = "sendgrid_backend.SendgridBackend"
+SENDGRID_API_KEY = os.environ.get('SENDGRID_API_KEY', 'SENDGRID_API_KEY')
 
 WAGTAILADMIN_NOTIFICATION_FROM_EMAIL = 'evan.rosa@evro.io'
 WAGTAILADMIN_NOTIFICATION_USE_HTML = True

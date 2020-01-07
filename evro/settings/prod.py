@@ -27,9 +27,6 @@ AWS_HEADERS = {
     'Access-Control-Allow-Origin': '*'
 }
 
-# STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
-
 
 # Database
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
@@ -64,7 +61,6 @@ ALLOWED_HOSTS = [
 ]
 MEDIA_URL = "https://%s/" % AWS_S3_CUSTOM_DOMAIN
 DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
-# STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.ManifestStaticFilesStorage'
 EMAIL_BACKEND = "sendgrid_backend.SendgridBackend"
 
 WAGTAILADMIN_NOTIFICATION_FROM_EMAIL = 'evan.rosa@evro.io'

@@ -154,12 +154,10 @@ STATICFILES_FINDERS = [
 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'build/static'),
-    # new directory for wagtail admin production
-    os.path.join(BASE_DIR, 'build/static/wagtail-static/static'),
 ]
 
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'build/static/wagtail-static')
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
 STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 

@@ -27,7 +27,9 @@ AWS_HEADERS = {
     'Access-Control-Allow-Origin': '*'
 }
 
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+# STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
+
 
 # Database
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
@@ -55,7 +57,6 @@ ALLOWED_HOSTS = [
     "localhost",
     "0.0.0.0",
     "127.0.0.1",
-    "127.0.0.1:8000",
     "evro.herokuapp.com",
     "evro-io-production.herokuapp.com",
     "www.evro.io",
